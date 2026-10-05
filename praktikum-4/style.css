@@ -1,0 +1,214 @@
+/* RESET & CSS VARIABLES */
+:root {
+  --color-primary: #0056b3;
+  --color-surface: #f8f9fa;
+  --color-border: #dee2e6;
+  --radius: 8px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f2f5;
+  color: #333333;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   BATASAN UKURAN GAMBAR (PENTING SUPAYA TIDAK KEBESARAN)
+   ========================================================================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header img,
+.profile-header-img {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.profile-gallery {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.gallery-img {
+  max-width: 200px !important;
+  height: 130px !important;
+  object-fit: cover !important;
+  border-radius: var(--radius);
+}
+
+.profile-circle-img {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+/* ==========================================================================
+   BAGIAN C — NAVIGASI FLEXBOX
+   ========================================================================== */
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  display: inline-block;
+}
+
+.nav-link:hover, 
+.nav-link:focus-visible {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* ==========================================================================
+   BAGIAN D & E — PAGE LAYOUT (MAIN & ASIDE FLEXBOX)
+   ========================================================================== */
+.page-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.page-layout > main {
+  flex: 1 1 36rem;
+  min-width: 0;
+}
+
+.page-layout > aside {
+  flex: 1 1 16rem;
+  padding: var(--space-2);
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+/* ==========================================================================
+   BAGIAN F — CARD LIST & CARDS
+   ========================================================================== */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  margin-bottom: 1.5rem;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.card-list > .card {
+  flex: 1 1 16rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   BAGIAN G — BADGE POSITIONING (RELATIVE & ABSOLUTE)
+   ========================================================================== */
+.card--featured {
+  position: relative;
+  padding-block-start: 3rem;
+}
+
+.badge {
+  position: absolute;
+  inset-block-start: 0.75rem;
+  inset-inline-end: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  color: #ffffff;
+  background: var(--color-primary);
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   STYLING FORM KONTAK
+   ========================================================================== */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.btn-submit {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-submit:hover {
+  background: #004085;
+}
+
+/* ==========================================================================
+   BAGIAN H — MEDIA RESPONSIF
+   ========================================================================== */
+pre {
+  overflow-x: auto;
+}
+
+a, p {
+  overflow-wrap: anywhere;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}

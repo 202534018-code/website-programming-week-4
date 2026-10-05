@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkenalan Diri — Maria Mensiana Boa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Perkenalan Diri</h1>
+        <!-- Foto Profil Header (Diberi max-width agar tidak kebesaran) -->
+        <img src="cece.jpeg" alt="Foto Profil" class="profile-header-img" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
+
+        <!-- Bagian C: Navigasi Flexbox -->
+        <nav aria-label="Navigasi utama">
+            <ul class="nav-list">
+                <li><a href="#profil" class="nav-link">Profil</a></li>
+                <li><a href="#hobi" class="nav-link">Hobi</a></li>
+                <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian D & E: Page Layout (Main & Aside Flexbox) -->
+    <div class="page-layout">
+
+        <main>
+            <!-- Card Profil -->
+            <article id="profil" class="card">
+                <h2>Profil Saya</h2>
+                <div class="profile-gallery">
+                    <img src="pantai.jpg" alt="Foto pantai" class="gallery-img" style="max-width: 200px; height: 130px; object-fit: cover; border-radius: 8px;">
+                    <img src="cece.jpeg" alt="Foto diri saya" class="profile-circle-img" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                
+                <p>
+                    Halo, nama saya Maria Mensiana Boa. Saya adalah mahasiswa Sistem Informasi.
+                    Saya sedang belajar membuat website menggunakan HTML dan CSS.
+                </p>
+                <p>
+                    Tujuan saya belajar adalah agar dapat memahami bagaimana cara kerja website secara mendalam.
+                </p>
+            </article>
+
+            <!-- Bagian F & G: Card List & Badge Terposisi -->
+            <section id="hobi">
+                <h2>Hobi dan Minat</h2>
+                <p>Beberapa hal yang saya sukai:</p>
+
+                <div class="card-list">
+                    <article class="card card--featured">
+                        <span class="badge">Unggulan</span>
+                        <h3>Belajar Teknologi</h3>
+                        <p>Mempelajari perkembangan teknologi komputer dan sistem informasi.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Membuat Website</h3>
+                        <p>Mengembangkan halaman web menggunakan HTML dan CSS.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Mendengarkan Musik</h3>
+                        <p>Menikmati musik untuk menemani waktu belajar.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section Form Kontak -->
+            <section id="kontak" class="card">
+                <h2>Kirim Pesan</h2>
+
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="nama">Nama lengkap</label>
+                        <input id="nama" name="nama" type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Alamat email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" name="pesan" minlength="10" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Kirim Pesan</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Sidebar / Aside -->
+        <aside aria-labelledby="info-tambahan">
+            <h2 id="info-tambahan">Informasi Tambahan</h2>
+            <p>Halaman ini dikembangkan menggunakan penataan layout modern Flexbox pada Praktikum 4.</p>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Maria Mensiana Boa. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+
+</html>
